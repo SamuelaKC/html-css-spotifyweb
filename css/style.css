@@ -4,6 +4,20 @@ background header #080b12
 background content #141922
 background footer #282828 
 menu nel content in hover è sottolienato colore #adff2f
+
+MISURE MEDIA QUERY 
+
+@media only screen and (min-width: 576px) {
+
+}
+@media only screen and (min-width: 768px) {
+
+
+}
+@media only screen and (min-width: 992px) {
+
+}
+
 */
 
 
@@ -78,21 +92,42 @@ main .sidebar {
     align-content: flex-end;
 }
 
+.logo-full{
+    display:block;
+    width: 100px;
+}
+
+    .logo-small{
+    display:none;
+    }
+
+@media (max-width: 640px) and (min-width: 320px){
+
+    .logo-full{
+    display:none;
+    }
+
+    .logo-small{
+    display:block;
+    width: 30px;
+    }
+}
 
 /* Sezione 2 centrale header */
 
 main .content {
+    height: 100%;
     background-color: #141922;
     overflow-y: scroll;
-    height: 100%;
 }
 
 .content-header {
     width: 100%;
     height: 100px;
-    background-color: #080b12;
+    background-color: rgba(8, 11, 18, 0.5);
     position: fixed;
 }
+
 .headboard {
     display: flex;
     justify-content: flex-end;
@@ -161,4 +196,18 @@ main .content {
     height: 100px;
     display: flex;
     justify-content: space-between;
+    padding-top: 10px;
 }
+
+.far {
+    line-height: 0.5;
+}
+
+.footer-left {
+    display: block;
+}
+
+
+
+
+
