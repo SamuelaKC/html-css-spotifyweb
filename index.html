@@ -25,30 +25,55 @@
 						</div>
 						<div class="menu-sidebar">
 							<ul>
-								<li><img src="" alt="home" />Home</li>
-								<li><img src="" alt="search" />Cerca</li>
-								<li><img src="" alt="la tua libreria" />La tua libreria</li>
+								<li>
+									<a href="#">
+										<img src="./img/home.svg" alt="home" class="img-full" /> <span class="none">Home</span>
+									</a>
+									<a href="#"><img src="./img/home.svg" alt="home" class="img-small" /></a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./img/search.svg" alt=cerca" class="img-full" /> <span class="none">Cerca</span>
+									</a>
+									<a href="#"><img src="./img/search.svg" alt="cerca" class="img-small" /></a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./img/libreria.svg" alt="la tua libreria" class="img-full" />
+										<span class="none">La tua libreria</span>
+									</a>
+									<a href="#"><img src="./img/libreria.svg" alt="la tua libreria" class="img-small" /></a>
+								</li>
 							</ul>
 						</div>
 						<div class="playlist">
-							PLAYLIST
+							<h4>PLAYLIST</h4>
 							<ul>
-								<li><img src="" alt="crea playlist" />Crea Playlist</li>
-								<li>Nome Playlist</li>
-								<li>Nome Playlist</li>
-								<li>Nome Playlist</li>
-								<li>Nome Playlist</li>
-								<li>Nome Playlist</li>
-								<li>Nome Playlist</li>
-								<li>Nome Playlist</li>
+								<li>
+									<a href="#"><i class="fas fa-plus-square"></i> <span class="text-center">Crea Playlist</span></a>
+								</li>
+								<li><a href="#">Nome Playlist</a></li>
+								<li><a href="#">Nome Playlist</a></li>
+								<li><a href="#">Nome Playlist</a></li>
+								<li><a href="#">Nome Playlist</a></li>
+								<li><a href="#">Nome Playlist</a></li>
+								<li><a href="#">Nome Playlist</a></li>
+								<li><a href="#">Nome Playlist</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="sidebar-down">
 						<div class="footer-sidebar">
-							<div>Installa app</div>
+							<div class="footer-siderbar-1">
+								<img src="./img/download.svg" alt="installa app" class="img-full" />
+								<span class="none">Installa app</span>
+								<img src="./img/download.svg" alt="installa app" class="img-small" />
+							</div>
 							<hr />
-							<div><img src="" alt="sagoma" />John Doe</div>
+							<div class="footer-siderbar-2">
+								<img src="./img/profile.svg" alt="sagoma" class="img-full-profile" /> <span class="none">John Doe</span>
+								<img src="./img/profile.svg" alt="sagoma" class="img-small-profile" />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -78,32 +103,78 @@
 							</div>
 							<div class="header-right"></div>
 						</div>
-						<div class="content-disk-1">dischi</div>
+						<!-- sezione 3b centrale dischi -->
+						<div class="content-disk-1">
+							<div class="recently">
+								<h4>Recently played</h4>
+								<div class="recently-contain">
+									<div class="recent-cont">
+
+										
+										<div class="image-disk-1">
+											<img src="./img/metal_lifting.jpg" alt="metallica">
+											<div class="play-hover">
+												<div class="text-play"></div>
+											</div>
+										</div>
+										<p class="text">
+											<h5>Heavy Metal</h5> 
+											Subtitle
+											<br>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="creation">Creato da Jhon foe</div>
+							<div class="popular-artist">Artisti popolari</div>
+						</div>
 					</div>
 				</div>
 			</main>
 			<footer>
-				<div class="footer-left">
-					<ul>
-						<li>SINISTRA</li>
-					</ul>
+				<div class="footer-contain">
+				<div class="col-xs-3">
+					<div class="footer-left">
+						<div class="footer-left-1">
+							<div class="footer-left-image">
+								<div><img src="./img/sinister.jpeg" alt="Sinister" class="image-full" /></div>
+								<span class="footer-left-text-bold">Sinister</span>
+								<span class="footer-left-text-normal">Brano Nome</span>
+							</div>
+						</div>
+						<div class="footer-left-2">
+							<div class="heart">heart</div>
+							<div class="folder">folder</div>
+						</div>
+					</div>
 				</div>
-				<div class="footer-center">
-					<ul>
-						<li><i class="fas fa-random fa-lg"></i></li>
-						<li><i class="fas fa-step-backward fa-lg"></i></li>
-						<li><i class="far fa-play-circle fa-2x"></i></li>
-						<li><i class="fas fa-step-forward fa-lg"></i></li>
-						<li><i class="fas fa-redo fa-lg"></i></li>
-					</ul>
-					<ul>
-						<li>barra</li>
-					</ul>
+				<div class="col-xs-6">
+					<div class="footer-center">
+						<ul>
+							<li><i class="fas fa-random fa-lg"></i></li>
+							<li><i class="fas fa-step-backward fa-lg"></i></li>
+							<li><i class="far fa-play-circle fa-2x"></i></li>
+							<li><i class="fas fa-step-forward fa-lg"></i></li>
+							<li><i class="fas fa-redo fa-lg"></i></li>
+						</ul>
+						<div>
+							<ul class="container-bar">
+								<li><span class="number">0.25</span></li>
+								<li>
+									<div class="barra-container"><div class="barra barra-color"></div></div>
+								</li>
+								<li><span class="number">4.25</span></li>
+							</ul>
+						</div>
+					</div>
 				</div>
-				<div class="footer-right">
-					<ul>
-						<li>DESTRA</li>
-					</ul>
+				<div class="col-xs-3">
+					<div class="footer-right">
+						<ul>
+							<li>DESTRA</li>
+						</ul>
+					</div>
+				</div>
 				</div>
 			</footer>
 		</div>
