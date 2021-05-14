@@ -28,12 +28,13 @@ MISURE MEDIA QUERY
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 12px;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
+    font-size: 12px;
+
 }
 
 .container-fluid {
@@ -243,7 +244,7 @@ main .content {
 
 @media (max-width: 640px) and (min-width: 320px){
 
-  .content-header-menu {
+.content-header-menu {
     flex-wrap: wrap;
 }
 
@@ -293,35 +294,45 @@ main .content {
     width: 200px;
 }
 
-.recent-cont img:hover {
-    opacity: 0.5;
-}
-
 .image-disk-1 {
-    width: 20%;
+    width: 200px;
+    text-align: center;
 }
 
-.image-disk-1 img:hover {
+.hover-image {
     position: relative;
-    z-index: 1;
+    width: 200px;
 }
 
-.image-disk-1 i{
+.hover-image i {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
     display: none;
+    color: ivory;
+    font-size: 100px;
 }
 
-.image-disk-1 img:hover i {
-display: block;
+.hover-image:hover img {
+    opacity: 0.5;
+    position: relative;
+
+}
+
+.hover-image:hover i {
+    display: block;
+    z-index: 500;
 }
 
 .text-disk {
-    text-align: center;
+    padding: 10px;
 }
+
+.text-disk p {
+    padding: 10px;
+}
+
 
 
 /* inizio sezione footer */
