@@ -45,6 +45,23 @@ body {
     height: 100vh;
 }
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/* inizio main */
+
 .app main {
     height: calc(100vh - 100px);
     background-color: darkgray;
@@ -287,21 +304,21 @@ main .content {
 }
 
 .recent-cont {
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 .recent-cont img {
-    width: 200px;
+    /* width: 100%; */
 }
 
 .image-disk-1 {
-    width: 200px;
+    /* width: 100%; */
     text-align: center;
 }
 
 .hover-image {
     position: relative;
-    width: 200px;
+    /* width: 200px; */
 }
 
 .hover-image i {
@@ -332,23 +349,51 @@ main .content {
 .text-disk p {
     padding: 10px;
 }
+/* 
+@media only screen and (min-width: 576px) {
 
+    .image-disk-1 {
+    transform: scale(0.50);    
+} 
 
+}
+@media only screen and (min-width: 768px) {
 
-/* inizio sezione footer */
+    .image-disk-1 {
+    transform: scale(0.70);    
+} 
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+} */
+@media only screen and (min-width: 992px) {
+
+    .recent-cont {
+    transform: scale(0.80);    
 }
 
-.fl {
-        float: left;
+
+
 }
 
-.fr {
-    float: right;
+/* INIZIO DEL FOOTER */
+
+/* i px cercheranno di divendersi rispetto alle percentuale quindi i due laterali mettere in px e il centrale in percentuale */
+
+/* comune a footer  */
+
+.footer-left, .footer-right {
+    flex-basis: 230px;
+    height: 100%;
+}
+
+.footer-center {
+    flex-basis: 50%;
+    height: 100%;
+    flex-grow: 1;
+}
+
+
+.fa, .fas {
+    padding: 0 10px;
 }
 
 .app footer {
@@ -361,17 +406,12 @@ main .content {
 
 /* footer sx */
 
-.footer-left, .footer-right {
-    width: 15%;
-    padding: 10px;
+.footer-left {
+    display: flex;
+    align-items: center;
 }
 
-.footer-left-image, .container-bar {
-    display: inline-block;
-    }
-
 .image-full {
-    display: inline-block;
     width: 50px;
     height: 50px;
     background-size: cover
@@ -380,7 +420,6 @@ main .content {
 @media (max-width: 640px) and (min-width: 320px){
 
   .image-full {
-    display: inline-block;
     width: 20px;
     height: 20px;
     background-size: cover
@@ -388,6 +427,10 @@ main .content {
 
 /* da completare */
 
+}
+
+.footer-left-image {
+    padding-left: 10px;
 }
 
 .image-song, .text-song, .heart, .folder, .number, .barra-container {
@@ -415,29 +458,23 @@ main .content {
 /* footer centro */
 
 .footer-center {
-    width: 70%;
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .player {
-    text-align: center;
-}
-
-.player i {
-    padding: 0 20px 20px 20px;
-}
-
-.far {
-    line-height: 0.5;
+    padding: 20px 0 10px 0;
 }
 
 .container-bar {
-    width: 80%;
+    width: 100%;
+    text-align: center;
 }
 
 .barra-container {
-    width: 70%;
+    display: inline-block;
+    width: 50%;
     background-color: darkgrey;
 }
 
@@ -455,12 +492,21 @@ main .content {
 /* footer dx */
 
 .footer-right {
-    width: 15%;
+    display: flex;
+    align-items: center;
 }
 
-.footer-right-1 i {
-    padding-right: 10px;
+.footer-right-1 {
+    width: 100%;
 }
 
 
 
+
+
+
+
+
+
+
+ 
