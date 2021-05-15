@@ -5,18 +5,13 @@ background content #141922
 background footer #282828 
 menu nel content in hover è sottolienato colore #adff2f
 
+
 MISURE MEDIA QUERY 
 
-@media only screen and (min-width: 576px) {
+SMARTPHONE @media only screen and (min-width : 320px) and (max-width : 480px) {}
 
-}
-@media only screen and (min-width: 768px) {
+TABLET @media only screen and (min-width : 768px) and (max-width : 1024px) {}
 
-
-}
-@media only screen and (min-width: 992px) {
-
-}
 
 */
 
@@ -33,8 +28,6 @@ MISURE MEDIA QUERY
 body {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
-    font-size: 14px;
-
 }
 
 .container-fluid {
@@ -45,21 +38,6 @@ body {
     height: 100vh;
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.fl {
-    float: left;
-}
-
-.fr {
-    float: right;
-}
-
-
 /* inizio main */
 
 .app main {
@@ -69,25 +47,6 @@ body {
 
 /* sezione comune a content-header-menu */
 
-/* .header-center{
-    display: flex;
-}    
-
-.header-center{
-    padding: 5px 15px;
-    color: white;
-    text-align: center;
-    list-style: none;
-}
-
-.header-center:first-child {
-    flex-basis: 200px;
-}
-
-.header-center:first-child {
-    flex-basis: 200px;
-    justify-content: flex-end;
-} */
 
 /* sezione 1 menu a sinistra */
 
@@ -135,13 +94,24 @@ main .sidebar {
     border-radius: 15px;
 }
 
+.none a {
+
+    color: darkgray;
+    text-decoration: none;
+}
+
+.none a:hover {
+
+    color: darkgray;
+    text-decoration: none;
+}
 
 /* Sidebar per cellulari */
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
 
 main .sidebar {
-        padding: 0;
+    padding: 0;
     }
 
     .logo {
@@ -172,11 +142,19 @@ main .sidebar {
 
 /* sidebar per tablet */
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
 
+    .sidebar {
+    font-size: 10px;
+    }
 
-}
-@media only screen and (min-width: 992px) {
+    .sidebar ul li {
+    padding: 5px 0;
+    }    
+
+    .playlist i{
+    padding: 0 3px;
+    }
 
 }
 
@@ -225,6 +203,7 @@ main .content {
     height: 100px;
     background-color: rgba(8, 11, 18, 0.5);
     position: fixed;
+    z-index: 999;
 }
 
 .headboard {
@@ -269,26 +248,107 @@ main .content {
 
 .header-menu a {
     padding: 0 50px 0 0;
-
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
 
 
 .content-header-menu {
     flex-wrap: wrap;
     overflow-wrap: hidden;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .header-menu {
     font-size: 9px;
 }
 
-.recent-cont{
-    transform: scale(0.5);
+
+.header-menu a {
+    padding: 0 25px 0 0;
 }
 
+.text-header {
+    text-align: center;
+    margin: 30px 0;
+    padding: 10px 30px 10px 30px ;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    list-style: none;
+}
+
+.text-header a, .header-center a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+.text-disk p {
+    font-size: 12px;
+}
+
+}
+
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+.content-header-menu {
+    flex-wrap: wrap;
+    overflow-wrap: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-menu {
+    font-size: 14px;
+}
+
+
+.header-menu a {
+    padding: 0 25px 0 0;
+}
+
+.text-header {
+    text-align: center;
+    margin: 30px 0;
+    padding: 10px 30px 10px 30px ;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    list-style: none;
+}
+
+.text-header a, .header-center a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+
+h1 {
+    font-size: 16px;
+    margin: 30px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+.text-disk p {
+    font-size: 10px;
+}
 
 }
 
@@ -321,26 +381,33 @@ main .content {
 
 /* sezione 3b centrale dischi */
 
-.recently {
-    margin: 20px;
-}
-
-.recent-cont {
-    margin: 5px;
-}
-
-.recent-cont img {
-    width: 90%;
+.recently-contain, .creation-contain, .popular-contain {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 20px 0  0 20px;
 }
 
 .image-disk-1 {
-    /* width: 100%; */
+    width: 250px;
+    flex-flow: column wrap;
+    padding: 5px;
+}
+
+.image-disk-1 img {
+    width: 95%;
+}
+
+.popular-cont img {
+    border-radius: 50%;
+}
+
+.image-disk-1 {
     text-align: center;
 }
 
 .hover-image {
     position: relative;
-    /* width: 200px; */
 }
 
 .hover-image i {
@@ -365,37 +432,12 @@ main .content {
 }
 
 .text-disk {
-    padding: 10px;
+    margin-top: 15px;
 }
 
 .text-disk p {
-    padding: 10px;
+    padding: 10px;    
 }
-/* 
-@media only screen and (min-width: 576px) {
-
-    .image-disk-1 {
-    transform: scale(0.50);    
-} 
-
-}
-@media only screen and (min-width: 768px) {
-
-    .image-disk-1 {
-    transform: scale(0.70);    
-} 
-
-} 
-@media only screen and (min-width: 992px) {
-
-    .content-disk-1{
-    transform: scale(0.75);  
-    padding: 5px;  
-}
-
-
-
-}*/
 
 /* INIZIO DEL FOOTER */
 
@@ -434,6 +476,12 @@ main .content {
     align-items: center;
 }
 
+.footer-left-image, .footer-right-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .image-full {
     width: 50px;
     height: 50px;
@@ -441,21 +489,20 @@ main .content {
 }
 
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
-.app footer {
-    height: 90px;
+.footer-left-text-normal a {
+    color: #fff;
+    text-decoration: none;
 }
 
-    .footer-left, .footer-right {
-    flex-basis: 150px;
-    height: 100%;
+.footer-left-text-normal a:hover {
+    text-decoration: underline;
 }
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
 
 .footer-center {
-    flex-basis: 50%;
-    height: 100%;
-    flex-grow: 1;
+    flex-basis: 100%;
+    flex-grow: 0;
 }
 
     .image-full {
@@ -474,6 +521,7 @@ main .content {
     overflow: hidden;
 }
 
+
 .folder-heart {
     font-size: 10px;
     padding-left: 0;
@@ -481,7 +529,7 @@ main .content {
 }
 
 .fa, .fas {
-    padding: 0;
+    padding: 2px;
 }
 
 .footer-right-1 {
@@ -492,10 +540,10 @@ main .content {
     font-size: 10px;
 }
 
+.footer-left-image {
+    padding-left: 5px;
 }
 
-.footer-left-image {
-    padding-left: 10px;
 }
 
 .image-song, .text-song, .heart, .folder, .number, .barra-container {
@@ -509,6 +557,18 @@ main .content {
 
 .text-song, .heart, .folder {
     padding-left: 10px;
+}
+
+.heart a, .folder a {
+    color: darkgray;
+    text-decoration: none;
+    
+}
+
+.heart a:hover, .folder a:hover {
+    color: lightgray;
+    text-decoration: none;
+    
 }
 
 /* footer centro */
@@ -544,6 +604,26 @@ main .content {
     width: 60%; 
     background-color: lightgray;
 } 
+
+ .barra-color:hover {
+    width: 60%; 
+    background-color: #adff2f;
+}
+
+ .barra-color {
+    position: relative;
+}
+
+.barra-color:hover:before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    background: gray;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    left:calc(100% - 8px);
+}
 
 /* footer dx */
 
