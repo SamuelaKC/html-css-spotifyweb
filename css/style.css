@@ -11,11 +11,9 @@ MISURE MEDIA QUERY
 SMARTPHONE @media only screen and (min-width : 320px) and (max-width : 480px) {}
 
 TABLET @media only screen and (min-width : 768px) and (max-width : 1024px) {}
-
+ !!!!! Ricordati di mettere le mediaquery alla fine di ogni sezione -.- !!!!!!
 
 */
-
-
 
 /* Comune a tutti */
 
@@ -106,7 +104,39 @@ main .sidebar {
     text-decoration: none;
 }
 
-/* Sidebar per cellulari */
+.playlist i {
+    font-size: 30px;
+    color: gray;
+}
+
+.playlist i:hover {
+    font-size: 30px;
+    color: red;
+}
+
+h4 {
+    padding-top: 10px;
+}
+
+hr {
+    width: 80%;
+    text-align: center;
+}
+.sidebar img, .playlist i {
+    vertical-align: middle;
+}
+
+.sidebar-up {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.footer-siderbar-1, .footer-siderbar-2 {
+    padding: 10px 5px;
+}
+
+
+/* SMARTPHONE */
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 
@@ -134,15 +164,42 @@ main .sidebar {
     .none, .playlist {
         display: none;
     }
-
-.sidebar-up {
-    overflow-y: none;
-}
 }
 
-/* sidebar per tablet */
+/* INTERMEDIATE */
 
-@media only screen and (min-width : 768px) and (max-width : 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+main .sidebar {
+    padding: 0;
+    }
+
+    .logo {
+    padding: 0 5px;
+    }
+    
+.sidebar ul li {
+    padding: 5px 5px;
+}    
+
+    .logo-full, .img-full, .img-full-profile{
+    display:none;
+    }
+
+    .logo-small, .img-small, .img-small-profile{
+    display:block;
+    width: 20px;
+    }
+
+    .none, .playlist {
+        display: none;
+    }
+
+}
+
+/* TABLET */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 
     .sidebar {
     font-size: 10px;
@@ -156,37 +213,6 @@ main .sidebar {
     padding: 0 3px;
     }
 
-}
-
-.playlist i {
-    font-size: 30px;
-    color: gray;
-}
-
-.playlist i:hoover {
-    font-size: 30px;
-    color: red;
-}
-
-h4 {
-    padding-top: 10px;
-}
-
-hr {
-    width: 80%;
-    text-align: center;
-}
-.sidebar img, .playlist i {
-    vertical-align: middle;
-}
-
-.sidebar-up {
-    height: 100%;
-    overflow-y: auto;
-}
-
-.footer-siderbar-1, .footer-siderbar-2 {
-    padding: 10px 5px;
 }
 
 
@@ -243,114 +269,15 @@ main .content {
     flex-direction: row;
     justify-content:space-around;
     text-align: center;
-
+    margin-top: 120px;
+    margin-bottom: 10px;
 }
 
 .header-menu a {
     padding: 0 50px 0 0;
 }
 
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-
-
-.content-header-menu {
-    flex-wrap: wrap;
-    overflow-wrap: hidden;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.header-menu {
-    font-size: 9px;
-}
-
-
-.header-menu a {
-    padding: 0 25px 0 0;
-}
-
-.text-header {
-    text-align: center;
-    margin: 30px 0;
-    padding: 10px 30px 10px 30px ;
-    border: 1px solid #fff;
-    border-radius: 30px;
-    color: #fff;
-    list-style: none;
-}
-
-.text-header a, .header-center a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 10px;
-}
-
-h1 {
-    font-size: 16px;
-}
-
-h3 {
-    font-size: 14px;
-}
-
-.text-disk p {
-    font-size: 12px;
-}
-
-}
-
-
-@media only screen and (min-width : 768px) and (max-width : 1024px) {
-
-.content-header-menu {
-    flex-wrap: wrap;
-    overflow-wrap: hidden;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.header-menu {
-    font-size: 14px;
-}
-
-
-.header-menu a {
-    padding: 0 25px 0 0;
-}
-
-.text-header {
-    text-align: center;
-    margin: 30px 0;
-    padding: 10px 30px 10px 30px ;
-    border: 1px solid #fff;
-    border-radius: 30px;
-    color: #fff;
-    list-style: none;
-}
-
-.text-header a, .header-center a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 10px;
-}
-
-
-h1 {
-    font-size: 16px;
-    margin: 30px;
-}
-
-h3 {
-    font-size: 12px;
-}
-
-.text-disk p {
-    font-size: 10px;
-}
-
-}
+/* inizio menu del content */
 
 .content-header-menu a, .sidebar a {
     color: #7b7e82;
@@ -364,7 +291,7 @@ h3 {
 
 .underline {
     display: inline-block;
-    padding-bottom: 7px;
+    padding-bottom: 3px;
     position: relative;
 }
 
@@ -381,25 +308,34 @@ h3 {
 
 /* sezione 3b centrale dischi */
 
+.content-disk-1 {
+    padding: 20px 10px;
+}
+
 .recently-contain, .creation-contain, .popular-contain {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    margin: 20px 0  0 20px;
+    justify-content: space-around;
+    padding-top: 10px;
 }
 
-.image-disk-1 {
-    width: 250px;
+.recent-cont, .creation-cont, .popular-cont {
+    display: flex;
     flex-flow: column wrap;
-    padding: 5px;
-}
-
-.image-disk-1 img {
-    width: 95%;
+    flex: 4 0 0;
 }
 
 .popular-cont img {
     border-radius: 50%;
+}
+
+.image-disk-1 img {
+    width: 300px;
+}
+
+.image-disk-1 {
+    text-align: center;
+    padding: 5px 5px;
 }
 
 .image-disk-1 {
@@ -431,13 +367,119 @@ h3 {
     z-index: 500;
 }
 
-.text-disk {
-    margin-top: 15px;
+.text-disk p {
+    padding: 5px;    
+}
+
+ /* SMARTPHONE */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+.content-header-menu {
+    flex-wrap: wrap;
+}
+
+    /* inizio header dove c'è upgrade */
+
+.text-header {
+    margin: 30px 0;
+}
+
+.text-header a, .header-center a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* inizio menu centrale  */
+
+.header-menu {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.header-menu a {
+    padding: 10px 20px 0 0;
+}
+
+.underline {
+    padding-bottom: 0;
+}
+
+/* inizio contenuti dischi  */
+
+.image-disk-1 img {
+    width: 150px;
+}
+
+
+h1 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 10px;
 }
 
 .text-disk p {
-    padding: 10px;    
+    font-size: 9px;
 }
+
+}
+
+/* TABLET */
+
+@media only screen and (min-width : 481px) and (max-width : 1024px) {
+
+    .content-header-menu {
+    flex-wrap: wrap; 
+}
+
+    /* inizio header dove c'è upgrade */
+
+.text-header {
+    margin: 30px 0;
+} 
+
+.text-header a, .header-center a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* inizio menu centrale  */
+
+.header-menu {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+
+/* inizio contenuti dischi  */
+
+.image-disk-1 img {
+    width: 200px;
+}
+
+
+h1 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+.text-disk p {
+    font-size: 10px;
+}
+
+}
+
 
 /* INIZIO DEL FOOTER */
 
@@ -498,53 +540,6 @@ h3 {
     text-decoration: underline;
 }
 
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-
-.footer-center {
-    flex-basis: 100%;
-    flex-grow: 0;
-}
-
-    .image-full {
-    width: 20px;
-    height: 20px;
-    background-size: cover
-} 
-
-.footer-left-text-bold {
-    font-size: 9px;
-}
-
-.footer-left-text-normal {
-    font-size: 8px;
-    width: 50px;
-    overflow: hidden;
-}
-
-
-.folder-heart {
-    font-size: 10px;
-    padding-left: 0;
-    width: 20px;
-}
-
-.fa, .fas {
-    padding: 2px;
-}
-
-.footer-right-1 {
-    font-size: 10px;
-}
-
-.player, .number {
-    font-size: 10px;
-}
-
-.footer-left-image {
-    padding-left: 5px;
-}
-
-}
 
 .image-song, .text-song, .heart, .folder, .number, .barra-container {
     display: inline-block;
@@ -577,10 +572,7 @@ h3 {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.player {
-    padding: 20px 0 10px 0;
+    padding-top: 20px;
 }
 
 .container-bar {
@@ -638,6 +630,56 @@ h3 {
     width: 100%;
 }
 
+/* SMARTPHONE */
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+.image-full {
+    width: 20px;
+    height: 20px;
+    background-size: cover
+} 
+
+.footer-left-text-bold {
+    font-size: 9px;
+}
+
+.footer-left-text-normal {
+    font-size: 8px;
+    width: 50px;
+    overflow: hidden;
+}
+
+
+.folder-heart {
+    font-size: 10px;
+    padding-left: 0;
+    width: 20px;
+}
+
+.fa, .fas {
+    padding: 2px;
+}
+
+.footer-center {
+    flex-basis: 100%;
+    flex-grow: 5;
+}
+
+
+.footer-right-1 {
+    font-size: 10px;
+}
+
+.player, .number {
+    font-size: 10px;
+}
+
+.footer-left-image {
+    padding-left: 5px;
+}
+
+}
 
 
 
