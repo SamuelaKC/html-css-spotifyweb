@@ -315,14 +315,14 @@ main .content {
 .recently-contain, .creation-contain, .popular-contain {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    padding-top: 10px;
+    justify-content: flex-start;
+    flex-shrink: 6;
 }
 
 .recent-cont, .creation-cont, .popular-cont {
     display: flex;
     flex-flow: column wrap;
-    flex: 4 0 0;
+    justify-content: space-between;
 }
 
 .popular-cont img {
@@ -330,12 +330,13 @@ main .content {
 }
 
 .image-disk-1 img {
-    width: 300px;
+    width: 100%;
 }
 
 .image-disk-1 {
     text-align: center;
     padding: 5px 5px;
+    width: 250px;
 }
 
 .image-disk-1 {
@@ -410,7 +411,11 @@ main .content {
 
 /* inizio contenuti dischi  */
 
-.image-disk-1 img {
+/* .image-disk-1 img {
+    width: 50%;
+} */
+
+.image-disk-1 {
     width: 150px;
 }
 
@@ -421,6 +426,10 @@ h1 {
 
 h3 {
     font-size: 10px;
+}
+
+.creation p, .popular-artist p {
+    font-size: 11px;
 }
 
 .text-disk p {
@@ -461,8 +470,8 @@ h3 {
 
 /* inizio contenuti dischi  */
 
-.image-disk-1 img {
-    width: 200px;
+.image-disk-1 {
+    width: 150px;
 }
 
 
@@ -474,9 +483,14 @@ h3 {
     font-size: 12px;
 }
 
+.creation p, .popular-artist p {
+    font-size: 12px;
+}
+
 .text-disk p {
     font-size: 10px;
 }
+
 
 }
 
