@@ -93,7 +93,6 @@ main .sidebar {
 }
 
 .none a {
-
     color: darkgray;
     text-decoration: none;
 }
@@ -111,7 +110,7 @@ main .sidebar {
 
 .playlist i:hover {
     font-size: 30px;
-    color: red;
+    color: #fff;
 }
 
 h4 {
@@ -150,7 +149,7 @@ main .sidebar {
     
 .sidebar ul li {
     padding: 5px 5px;
-}    
+}  
 
     .logo-full, .img-full, .img-full-profile{
     display:none;
@@ -314,29 +313,31 @@ main .content {
 
 .recently-contain, .creation-contain, .popular-contain {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    flex-shrink: 6;
+    flex-wrap: wrap;
+    /* flex-flow: row wrap; */
+    /* justify-content: flex-start; */
+    /* flex-shrink: 6; */
 }
 
 .recent-cont, .creation-cont, .popular-cont {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+    /* display: flex; */
+    width: calc(100% / 6 - 15px); /* dopo correzione */
+    margin-right: 15px; /* dopo correzione */
+    margin-top: 20px;
+    /* flex-flow: column wrap;
+    justify-content: space-between;    */
+}
+
+.hover-image img {
+    width: 100%;
 }
 
 .popular-cont img {
     border-radius: 50%;
 }
 
-.image-disk-1 img {
+.hover-image img {
     width: 100%;
-}
-
-.image-disk-1 {
-    text-align: center;
-    padding: 5px 5px;
-    width: 250px;
 }
 
 .image-disk-1 {
@@ -411,13 +412,14 @@ main .content {
 
 /* inizio contenuti dischi  */
 
-/* .image-disk-1 img {
-    width: 50%;
-} */
-
-.image-disk-1 {
-    width: 150px;
+.recent-cont, .creation-cont, .popular-cont {
+    width: calc(100% / 2 - 15px); /* dopo correzione */
 }
+
+
+/* .image-disk-1 {
+    width: 150px;
+} */
 
 
 h1 {
@@ -470,8 +472,8 @@ h3 {
 
 /* inizio contenuti dischi  */
 
-.image-disk-1 {
-    width: 150px;
+.recent-cont, .creation-cont, .popular-cont {
+    width: calc(100% / 4 - 15px); /* dopo correzione */
 }
 
 
@@ -611,12 +613,12 @@ h3 {
     background-color: lightgray;
 } 
 
- .barra-color:hover {
+    .barra-color:hover {
     width: 60%; 
     background-color: #adff2f;
 }
 
- .barra-color {
+    .barra-color {
     position: relative;
 }
 
@@ -629,6 +631,18 @@ h3 {
     height: 15px;
     border-radius: 100%;
     left:calc(100% - 8px);
+}
+
+.player a i {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.big:hover  i{
+    transform: scale(1.25);    
+    text-decoration: none;
+
 }
 
 /* footer dx */
@@ -695,12 +709,3 @@ h3 {
 
 }
 
-
-
-
-
-
-
-
-
- 
